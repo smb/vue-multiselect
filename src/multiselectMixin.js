@@ -32,6 +32,7 @@ function flattenOptions (values, label) {
       if (curr[values] && curr[values].length) {
         prev.push({
           $groupLabel: curr[label],
+          $groupData: curr,
           $isLabel: true
         })
         return prev.concat(curr[values])
